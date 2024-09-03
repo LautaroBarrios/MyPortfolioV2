@@ -17,12 +17,10 @@ function App() {
       />
       <section className="flex flex-col w-full h-screen overflow-y-scroll">
         <div ref={homeRef}>
-          <Home
-            contactRef={contactRef}
-          />
+          <Home contactRef={contactRef} />
         </div>
-        <div ref={technologiesRef}>
-          <Technologies />
+        <div>
+          <Technologies technologiesRef={technologiesRef} />
         </div>
         <div ref={projectsRef}>
           <Projects />

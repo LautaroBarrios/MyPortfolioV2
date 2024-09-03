@@ -89,8 +89,6 @@
 }
 
 .blink {
-  /* width: 3px;
-  height: 64px; */
   border-right: 2px solid #d4f1ff;
   animation: blinkAnimation 1.5s infinite;
 }
