@@ -1,5 +1,6 @@
-import { Contact, DecorationBackground, Picture } from "../index.js";
+import { Contact, Picture } from "../index.js";
 import { useEffect, useState } from "react";
+import DecorationBackground from "../decoration/DecorationBackground.jsx"
 
 const Home = ({ contactRef, triggerContactBlink }) => {
   const [isBlinking, setIsBlinking] = useState(false);

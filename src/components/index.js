@@ -4,7 +4,6 @@ import NavBar from "./navbar/NavBar";
 import Picture from "./home/Picture";
 import Projects from "./projects/Projects";
 import Technologies from "./technologies/Technologies";
-import DecorationBackground from "./decoration/decorationBackground";
 
 export {
   Contact,
@@ -13,5 +12,4 @@ export {
   Picture,
   Projects,
   Technologies,
-  DecorationBackground,
 };
