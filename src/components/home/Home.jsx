@@ -53,7 +53,7 @@ const Home = ({ triggerContactBlink }) => {
       <DecorationBackground />
 
       <div
-        id="technologies"
+        id="contact"
         className={`absolute bottom-3 xl:bottom-10 left-1/2 xl:left-10 transform xl:translate-x-0 -translate-x-1/2 z-10 ${
           isBlinking ? "blinking" : ""
         }`}
