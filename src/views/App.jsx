@@ -19,8 +19,8 @@ function App() {
         <div ref={homeRef}>
           <Home contactRef={contactRef} />
         </div>
-        <div>
-          <Technologies technologiesRef={technologiesRef} />
+        <div ref={technologiesRef}>
+          <Technologies />
         </div>
         <div ref={projectsRef}>
           <Projects />

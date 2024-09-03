@@ -6,14 +6,17 @@ const NavBar = ({ homeRef, contactRef, technologiesRef, projectsRef }) => {
 
   const toggleSetting = () => setShowSetting(!showSetting);
 
-  const scrollToSection = (ref) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }
-  };
+ const scrollToSection = (ref) => {
+   if (ref.current) {
+     ref.current.scrollIntoView({
+       behavior: "smooth",
+       block: "center",
+     });
+     setTimeout(() => {
+       ref.current = null;
+     }, 1000); 
+   }
+ };
 
   return (
     <nav className="flex items-center justify-between bg-[#05161A] w-full py-2 md:px-10 fixed text-white whitespace-nowrap z-50">
