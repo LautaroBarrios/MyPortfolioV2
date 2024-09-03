@@ -14,11 +14,12 @@ const NavBar = ({
 
   const scrollToSection = (ref) => {
     if (ref.current) {
-      ref.current.scrollIntoView({
+      ref.current.scroll({
+        top: ref.current.scrollHeight / 2,
         behavior: "smooth",
-        block: "center",
       });
     }
+
   };
 
   return (
