@@ -1,22 +1,25 @@
 import { useState } from "react";
 import { Hand, Home, Projects, Setting, Technology, User } from "../../icons";
 
-const NavBar = ({ homeRef, contactRef, technologiesRef, projectsRef }) => {
+const NavBar = ({
+  homeRef,
+  contactRef,
+  technologiesRef,
+  projectsRef,
+  onContactClick,
+}) => {
   const [showSetting, setShowSetting] = useState(false);
 
   const toggleSetting = () => setShowSetting(!showSetting);
 
- const scrollToSection = (ref) => {
-   if (ref.current) {
-     ref.current.scrollIntoView({
-       behavior: "smooth",
-       block: "center",
-     });
-     setTimeout(() => {
-       ref.current = null;
-     }, 1000); 
-   }
- };
+  const scrollToSection = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  };
 
   return (
     <nav className="flex items-center justify-between bg-[#05161A] w-full py-2 md:px-10 fixed text-white whitespace-nowrap z-50">
@@ -33,7 +36,13 @@ const NavBar = ({ homeRef, contactRef, technologiesRef, projectsRef }) => {
           </span>
         </button>
 
-        <button type="button" onClick={() => scrollToSection(contactRef)}>
+        <button
+          type="button"
+          onClick={() => {
+            scrollToSection(contactRef);
+            onContactClick();
+          }}
+        >
           <span className="flex md:w-36 items-center justify-center md:px-4 md:py-.5 hover:text-[#dff4ff] hover:border-b-[0.1px] border-[#3f5d61] active:scale-95 transition-all">
             <User />
             <p className="md:pl-0 pl-2 md:flex hidden">CONTACT</p>
