@@ -1,6 +1,4 @@
-import Contact from "../contact/Contact";
-import {DecorationBackground} from "../index.js"
-import { Picture } from "..";
+import { Contact, DecorationBackground, Picture } from "../index.js";
 import { useEffect, useState } from "react";
 
 const Home = ({ contactRef, triggerContactBlink }) => {
