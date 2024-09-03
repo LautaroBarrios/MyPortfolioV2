@@ -1,5 +1,5 @@
 import Contact from "../contact/Contact";
-import DecorationBackground from "../decoration/decorationBackground";
+import {DecorationBackground} from "../index.js"
 import { Picture } from "..";
 import { useEffect, useState } from "react";
 
