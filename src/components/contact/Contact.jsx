@@ -7,7 +7,7 @@ const Contact = () => {
         href="https://mail.google.com/mail/?view=cm&fs=1&to=barrios.g.lautaro@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="md:h-12 md:w-12 h-9 w-9 flex items-center justify-center hover:scale-105"
+        className="md:h-11 md:w-11 h-9 w-9 flex items-center justify-center hover:scale-105"
         title="Enviar un correo electrónico"
       >
         <Gmail />
@@ -17,7 +17,7 @@ const Contact = () => {
         href="https://github.com/LautaroBarrios"
         target="_blank"
         rel="noopener noreferrer"
-        className="md:h-12 md:w-12 h-9 w-9 flex items-center justify-center hover:scale-105"
+        className="md:h-11 md:w-11 h-9 w-9 flex items-center justify-center hover:scale-105"
         title="Ver mi perfil de GitHub"
       >
         <GitHub />
@@ -27,7 +27,7 @@ const Contact = () => {
         href="https://www.linkedin.com/in/lautaro-g-barrios/"
         target="_blank"
         rel="noopener noreferrer"
-        className="md:h-12 md:w-12 h-9 w-9 flex items-center justify-center hover:scale-105"
+        className="md:h-11 md:w-11 h-9 w-9 flex items-center justify-center hover:scale-105"
         title="Ver mi perfil de LinkedIn"
       >
         <LinkedIn />
@@ -37,7 +37,7 @@ const Contact = () => {
         href="./CV-BarriosLautaroG.pdf"
         title="Descargar CV"
         download={""}
-        className="md:h-12 md:w-12 h-9 w-9 hover:scale-105"
+        className="md:h-11 md:w-11 h-9 w-9 hover:scale-105"
       >
         <CV />
       </a>
