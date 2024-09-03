@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Home, NavBar, Projects, Technologies } from "../components";
 
 function App() {
@@ -7,13 +7,6 @@ function App() {
   const technologiesRef = useRef(null);
   const projectsRef = useRef(null);
 
-   const [triggerContactBlink, setTriggerContactBlink] = useState(false);
-
-    const handleContactClick = () => {
-      setTriggerContactBlink(true);
-      setTimeout(() => setTriggerContactBlink(false), 1500); // Resetear el trigger después de 1.5s
-    };
-
   return (
     <section className="flex flex-col w-full items-center justify-start relative suseBold-font">
       <NavBar
@@ -21,13 +14,11 @@ function App() {
         contactRef={contactRef}
         technologiesRef={technologiesRef}
         projectsRef={projectsRef}
-        onContactClick={handleContactClick}
       />
       <section className="flex flex-col w-full h-screen overflow-y-scroll">
         <div ref={homeRef}>
           <Home
             contactRef={contactRef}
-            triggerContactBlink={triggerContactBlink}
           />
         </div>
         <div ref={technologiesRef}>
