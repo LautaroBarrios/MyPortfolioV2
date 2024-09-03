@@ -2,7 +2,7 @@ import CV from "./contact/CV";
 import Hand from "./nav/Hand";
 import Setting from "./nav/Setting";
 import LinkedIn from "./contact/LinkedIn";
-import Github from "./contact/Github";
+import GitHub from "./contact/GitHub.jsx";
 import Gmail from "./contact/Gmail";
 import Home from "./nav/Home";
 import Projects from "./nav/Projects";
@@ -31,7 +31,7 @@ export {
   Hand,
   Setting,
   LinkedIn,
-  Github,
+  GitHub,
   Gmail,
   Home,
   Projects,

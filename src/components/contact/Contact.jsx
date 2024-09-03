@@ -1,5 +1,4 @@
-import { CV, Gmail, LinkedIn } from "../../icons";
-import GitHub from "../../icons/contact/Github";
+import { CV, Gmail, GitHub, LinkedIn } from "../../icons";
 
 const Contact = () => {
   return (
