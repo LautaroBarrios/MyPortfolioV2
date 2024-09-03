@@ -2,7 +2,7 @@ import { Contact, Picture } from "../index.js";
 import { useEffect, useState } from "react";
 import DecorationBackground from "../decoration/DecorationBackground.jsx";
 
-const Home = ({ contactRef, triggerContactBlink }) => {
+const Home = ({ triggerContactBlink }) => {
   const [isBlinking, setIsBlinking] = useState(false);
 
   useEffect(() => {
@@ -53,7 +53,6 @@ const Home = ({ contactRef, triggerContactBlink }) => {
       <DecorationBackground />
 
       <div
-        ref={contactRef}
         id="technologies"
         className={`absolute bottom-3 xl:bottom-10 left-1/2 xl:left-10 transform xl:translate-x-0 -translate-x-1/2 z-10 ${
           isBlinking ? "blinking" : ""

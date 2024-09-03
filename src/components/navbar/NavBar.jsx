@@ -1,25 +1,16 @@
 import { useState } from "react";
 import { Hand, Home, Projects, Setting, Technology, User } from "../../icons";
 
-const NavBar = ({
-  homeRef,
-  contactRef,
-  technologiesRef,
-  projectsRef,
-  onContactClick,
-}) => {
+const NavBar = ({ onContactClick }) => {
   const [showSetting, setShowSetting] = useState(false);
 
   const toggleSetting = () => setShowSetting(!showSetting);
 
-  const scrollToSection = (ref) => {
-    if (ref.current) {
-      ref.current.scroll({
-        top: ref.current.scrollHeight / 2,
-        behavior: "smooth",
-      });
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
     }
-
   };
 
   return (
@@ -30,7 +21,7 @@ const NavBar = ({
       </article>
 
       <div className="flex md:w-10/12 w-full items-center md:justify-evenly justify-around">
-        <button type="button" onClick={() => scrollToSection(homeRef)}>
+        <button type="button" onClick={() => scrollToSection("home")}>
           <span className="flex md:w-36 items-center justify-center md:px-4 md:py-.5 hover:text-[#dff4ff] hover:border-b-[0.1px] border-[#3f5d61] active:scale-95 transition-all">
             <Home />
             <p className="md:pl-0 pl-2 md:flex hidden">HOME</p>
@@ -40,8 +31,8 @@ const NavBar = ({
         <button
           type="button"
           onClick={() => {
-            scrollToSection(contactRef);
             onContactClick();
+            scrollToSection("contact"); // Asegúrate de tener un elemento con id="contact"
           }}
         >
           <span className="flex md:w-36 items-center justify-center md:px-4 md:py-.5 hover:text-[#dff4ff] hover:border-b-[0.1px] border-[#3f5d61] active:scale-95 transition-all">
@@ -50,14 +41,14 @@ const NavBar = ({
           </span>
         </button>
 
-        <button type="button" onClick={() => scrollToSection(technologiesRef)}>
+        <button type="button" onClick={() => scrollToSection("technologies")}>
           <span className="flex md:w-36 items-center justify-center md:px-4 md:py-.5 hover:text-[#dff4ff] hover:border-b-[0.1px] border-[#3f5d61] active:scale-95 transition-all">
             <Technology />
             <p className="md:pl-0 pl-2 md:flex hidden">TECHNOLOGIES</p>
           </span>
         </button>
 
-        <button type="button" onClick={() => scrollToSection(projectsRef)}>
+        <button type="button" onClick={() => scrollToSection("projects")}>
           <span className="flex md:w-36 items-center justify-center md:px-4 md:py-.5 hover:text-[#dff4ff] hover:border-b-[0.1px] border-[#3f5d61] active:scale-95 transition-all">
             <Projects />
             <p className="md:pl-0 pl-2 md:flex hidden">PROJECTS</p>
