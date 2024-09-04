@@ -1,27 +1,25 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Hand, Home, Projects, Setting, Technology, User } from "../../icons";
 
-const NavBar = ({ onContactClick }) => {
+const NavBar = ({
+  homeRef,
+  contactRef,
+  technologiesRef,
+  projectsRef,
+  onContactClick,
+}) => {
   const [showSetting, setShowSetting] = useState(false);
 
   const toggleSetting = () => setShowSetting(!showSetting);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "center" });
+  const scrollToSection = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
     }
   };
-
-   useEffect(() => {
-     const handleScroll = () => {
-       if (showSetting) {
-         setShowSetting(false);
-       }
-     };
-     window.addEventListener("scroll", handleScroll);
-     return () => window.removeEventListener("scroll", handleScroll);
-   }, [showSetting]);
 
   return (
     <nav className="flex items-center justify-between bg-[#05161A] w-full py-2 md:px-10 fixed text-white whitespace-nowrap z-50">
@@ -31,7 +29,7 @@ const NavBar = ({ onContactClick }) => {
       </article>
 
       <div className="flex md:w-10/12 w-full items-center md:justify-evenly justify-around">
-        <button type="button" onClick={() => scrollToSection("home")}>
+        <button type="button" onClick={() => scrollToSection(homeRef)}>
           <span className="flex md:w-36 items-center justify-center md:px-4 md:py-.5 hover:text-[#dff4ff] hover:border-b-[0.1px] border-[#3f5d61] active:scale-95 transition-all">
             <Home />
             <p className="md:pl-0 pl-2 md:flex hidden">HOME</p>
@@ -41,8 +39,8 @@ const NavBar = ({ onContactClick }) => {
         <button
           type="button"
           onClick={() => {
+            scrollToSection(contactRef);
             onContactClick();
-            scrollToSection("contact"); // Asegúrate de tener un elemento con id="contact"
           }}
         >
           <span className="flex md:w-36 items-center justify-center md:px-4 md:py-.5 hover:text-[#dff4ff] hover:border-b-[0.1px] border-[#3f5d61] active:scale-95 transition-all">
@@ -51,14 +49,14 @@ const NavBar = ({ onContactClick }) => {
           </span>
         </button>
 
-        <button type="button" onClick={() => scrollToSection("technologies")}>
+        <button type="button" onClick={() => scrollToSection(technologiesRef)}>
           <span className="flex md:w-36 items-center justify-center md:px-4 md:py-.5 hover:text-[#dff4ff] hover:border-b-[0.1px] border-[#3f5d61] active:scale-95 transition-all">
             <Technology />
             <p className="md:pl-0 pl-2 md:flex hidden">TECHNOLOGIES</p>
           </span>
         </button>
 
-        <button type="button" onClick={() => scrollToSection("projects")}>
+        <button type="button" onClick={() => scrollToSection(projectsRef)}>
           <span className="flex md:w-36 items-center justify-center md:px-4 md:py-.5 hover:text-[#dff4ff] hover:border-b-[0.1px] border-[#3f5d61] active:scale-95 transition-all">
             <Projects />
             <p className="md:pl-0 pl-2 md:flex hidden">PROJECTS</p>

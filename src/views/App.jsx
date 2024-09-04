@@ -2,6 +2,11 @@ import { useRef, useState } from "react";
 import { Home, NavBar, Projects, Technologies } from "../components";
 
 function App() {
+  const homeRef = useRef(null);
+  const contactRef = useRef(null);
+  const technologiesRef = useRef(null);
+  const projectsRef = useRef(null);
+
    const [triggerContactBlink, setTriggerContactBlink] = useState(false);
 
     const handleContactClick = () => {
@@ -11,15 +16,24 @@ function App() {
 
   return (
     <section className="flex flex-col w-full items-center justify-start relative suseBold-font">
-      <NavBar onContactClick={handleContactClick} />
+      <NavBar
+        homeRef={homeRef}
+        contactRef={contactRef}
+        technologiesRef={technologiesRef}
+        projectsRef={projectsRef}
+        onContactClick={handleContactClick}
+      />
       <section className="flex flex-col w-full h-screen overflow-y-scroll">
-        <div id="home">
-          <Home triggerContactBlink={triggerContactBlink} />
+        <div ref={homeRef}>
+          <Home
+            contactRef={contactRef}
+            triggerContactBlink={triggerContactBlink}
+          />
         </div>
-        <div id="technologies">
+        <div ref={technologiesRef}>
           <Technologies />
         </div>
-        <div id="projects">
+        <div ref={projectsRef}>
           <Projects />
         </div>
       </section>
