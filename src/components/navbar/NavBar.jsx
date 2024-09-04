@@ -7,6 +7,7 @@ const NavBar = ({
   technologiesRef,
   projectsRef,
   onContactClick,
+  onResetReferences,
 }) => {
   const [showSetting, setShowSetting] = useState(false);
 
@@ -17,8 +18,15 @@ const NavBar = ({
       ref.current.scrollIntoView({
         behavior: "smooth",
         block: "center",
+        inline: "center",
       });
     }
+  };
+
+  const handleContactClick = () => {
+    scrollToSection(contactRef);
+    onContactClick();
+    onResetReferences(); // Resetear referencias después del click
   };
 
   return (
@@ -36,13 +44,7 @@ const NavBar = ({
           </span>
         </button>
 
-        <button
-          type="button"
-          onClick={() => {
-            scrollToSection(contactRef);
-            onContactClick();
-          }}
-        >
+        <button type="button" onClick={handleContactClick}>
           <span className="flex md:w-36 items-center justify-center md:px-4 md:py-.5 hover:text-[#dff4ff] hover:border-b-[0.1px] border-[#3f5d61] active:scale-95 transition-all">
             <User />
             <p className="md:pl-0 pl-2 md:flex hidden">CONTACT</p>
