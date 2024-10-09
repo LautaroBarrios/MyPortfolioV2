@@ -4,6 +4,7 @@ import Setting from "./nav/Setting";
 import LinkedIn from "./contact/LinkedIn";
 import GitHub from "./contact/GitHub.jsx";
 import Gmail from "./contact/Gmail";
+import Arrow from "./nav/Arrow.jsx";
 import Home from "./nav/Home";
 import Projects from "./nav/Projects";
 import Technology from "./nav/Technology";
@@ -33,6 +34,7 @@ export {
   LinkedIn,
   GitHub,
   Gmail,
+  Arrow,
   Home,
   Projects,
   Technology,

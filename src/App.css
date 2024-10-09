@@ -15,6 +15,12 @@
   display: none; /* Elimina los botones de subir y bajar */
 }
 
+.scroll-hidden {
+  overflow-x: auto; /* Permite el desplazamiento horizontal */
+  scrollbar-width: none; /* Para Firefox */
+  -ms-overflow-style: none; /* Para Internet Explorer y Edge */
+}
+
 /* ||||||||||||||||||| Fonts ||||||||||||||||||| */
 @font-face {
   font-family: "SUSE-Bold";
