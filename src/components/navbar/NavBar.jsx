@@ -24,7 +24,7 @@ const NavBar = ({
 
   return (
     <nav className="flex items-center justify-between bg-[#05161A] w-full py-2 md:px-10 fixed text-white whitespace-nowrap z-50">
-      <article className="md:flex hidden items-center space-x-2 slide-in">
+      <article className="md:flex hidden items-center space-x-2 slide-in hover:cursor-default">
         <Hand />
         <p>Hello World!</p>
       </article>
