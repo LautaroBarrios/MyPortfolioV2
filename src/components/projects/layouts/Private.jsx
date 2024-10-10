@@ -1,12 +1,12 @@
 const Private = () => {
   return (
-    <section className="flex flex-col justify-center items-center h-[80%] w-full space-y-2 p-2 z-10 text-center text-white">
+    <section className="flex flex-col justify-center items-center md:h-[80%] h-auto w-full space-y-2 p-2 z-10 text-center text-white">
       <h5 className="text-2xl font-bold text-red-50">IMPORTANTE</h5>
       <p className="text-xl font-bold border-b pb-4 mx-4">
         Debido a que los siguientes proyectos manejan información
         delicada/privada no hay links de acceso disponibles para el público.
       </p>
-      <ol className="pt-4 px-2 lg:w-2/3 w-5/6 space-y-2 lg:h-auto h-48 lg:overflow-visible overflow-auto">
+      <ol className="pt-4 px-2 lg:w-2/3 w-[90%] space-y-2 lg:h-auto sm:h-48 h-40 lg:overflow-visible overflow-auto">
         <li>
           <p className="text-[#6ed1d6] text-lg">
             Sistema de gestión de empleados y contratos - Municipalidad de la
