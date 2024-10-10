@@ -18,24 +18,26 @@ const Home = ({ contactRef, triggerContactBlink }) => {
 
   return (
     <section className="flex bg-[#072e33] w-full h-screen items-center justify-between py-2 relative overflow-hidden">
-      <article className="flex h-full md:w-1/2 items-center mt-16 z-10 font-light">
+      <article className="flex h-full md:w-1/2 sm:2/3 items-center md:mt-16 z-20 font-light">
         <div className="relative mt-0">
-          <h1 className="text-[#d4f1ff] lg:text-4xl text-2xl mb-2 md:px-10 px-4">I'm</h1>
+          <h1 className="text-[#d4f1ff] lg:text-4xl sm:text-2xl text-xl mb-2 md:px-10 px-4">
+            I'm
+          </h1>
           <div className="flex s:flex-wrap s:flex-row flex-col s:items-center items-start md:px-10 px-4 slide-in">
-            <h2 className="text-gray-50 lg:text-7xl text-3xl mb-2 pr-4 md:pb-4">
+            <h2 className="text-gray-50 lg:text-7xl sm:text-3xl text-xl mb-2 pr-4 md:pb-4">
               Lautaro
             </h2>
-            <h3 className="text-gray-50 lg:text-7xl text-3xl mb-2 pr-4 md:pb-4">
+            <h3 className="text-gray-50 lg:text-7xl sm:text-3xl text-xl mb-2 pr-4 md:pb-4">
               Gabriel
             </h3>
             <div className="flex items-start">
-              <h4 className="text-gray-50 lg:text-7xl text-3xl mb-2 md:pb-4">
+              <h4 className="text-gray-50 lg:text-7xl sm:text-3xl text-xl mb-2 md:pb-4">
                 Barrios
               </h4>
-              <p className="text-gray-50 lg:text-7xl text-3xl blink border-r w-2 lg:h-16 h-10"/>
+              <p className="text-gray-50 lg:text-7xl sm:text-3xl text-xl blink border-r w-2 lg:h-16 sm:h-10 h-7" />
             </div>
           </div>
-          <div className="flex items-center bg-[#06292e] border-t-[1px] border-r-[1px] border-[#1e4045] md:w-10/12 w-8/12 py-3 rounded-e-full md:px-10 pl-4 md:pr-5 pr-8 slide-in">
+          <div className="flex items-center bg-[#06292e] border-t-[1px] border-r-[1px] border-[#1e4045] md:w-10/12 w-8/12 py-3 md:rounded-e-full rounded-e-[60px] md:px-10 pl-4 md:pr-5 pr-8 slide-in">
             <p className="text-gray-100">
               Full Stack Developer con conocimientos y experiencia en
               metodologías ágiles, estructuras de datos, algoritmos, frameworks
@@ -50,7 +52,7 @@ const Home = ({ contactRef, triggerContactBlink }) => {
 
       <div
         ref={contactRef}
-        className={`absolute bottom-3 xl:bottom-10 left-1/2 xl:left-10 transform xl:translate-x-0 -translate-x-1/2 z-10 ${
+        className={`absolute bottom-3 xl:bottom-10 left-1/2 xl:left-10 transform xl:translate-x-0 -translate-x-1/2 z-30 ${
           isBlinking ? "blinking" : ""
         }`}
       >
