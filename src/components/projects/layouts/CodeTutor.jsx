@@ -62,7 +62,7 @@ const CodeTutor = () => {
           <Arrow />
         </button>
       </div>
-      <div className="px-2 md:w-2/3 w-full">
+      <div className="px-2 md:w-2/3 w-full md:h-auto h-48 md:overflow-visible overflow-auto">
         <p className="text-[#c9b0ff] text-center">
           Code-Tutor es una plataforma en línea orientada a genter de
           Latinoamérica que sirve para conectar usuarios con tutores para
