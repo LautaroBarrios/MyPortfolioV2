@@ -37,7 +37,7 @@ const Home = ({ contactRef, triggerContactBlink }) => {
               <p className="text-gray-50 lg:text-7xl sm:text-3xl text-xl blink border-r w-2 lg:h-16 sm:h-10 h-7" />
             </div>
           </div>
-          <div className="flex items-center bg-[#06292e] border-t-[1px] border-r-[1px] border-[#1e4045] md:w-10/12 w-8/12 py-3 md:rounded-e-full rounded-e-[60px] md:px-10 pl-4 md:pr-5 pr-8 slide-in">
+          <div className="flex items-center bg-[#06292e] border-t-[1px] border-r-[1px] border-[#1e4045] md:w-10/12 sm:w-8/12 w-11/12 py-3 rounded-e-full md:px-10 pl-4 md:pr-5 pr-8 slide-in">
             <p className="text-gray-100">
               Full Stack Developer con conocimientos y experiencia en
               metodologías ágiles, estructuras de datos, algoritmos, frameworks
