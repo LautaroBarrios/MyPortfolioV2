@@ -5,6 +5,7 @@ export default {
     extend: {
       screens: {
         s: "410px",
+        "min-h": { raw: "(min-height: 650px)" },
       },
     },
   },
